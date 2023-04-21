@@ -1,0 +1,121 @@
+library ieee;
+    use ieee.std_logic_1164.all;
+    use ieee.numeric_std.all;
+library work;
+
+entity top_level is
+    port(
+        clock_50 : in std_logic;
+        reset_n  : in std_logic;
+        uart_rxd : in std_logic;
+        hex0     : out std_logic_vector(6 downto 0);
+        ledr     : out std_logic_vector(1 downto 0);
+    );
+end entity top_level;
+
+package seven_seg_pkg is
+    -- Declaration part
+    type t_7seg_numbers is array (16 downto 0) of std_logic_vector(6 downto 0);
+    constant c_7seg_numbers : t_7seg_numbers := (
+        "1000000", -- 0 = 0
+        "0100100", -- 1 = 1
+        "0010010", -- 2 = 2
+        "0110000", -- 3 = 3
+        "0011001", -- 4 = 4
+        "0010010", -- 5 = 5
+        "0000010", -- 6 = 6
+        "1111000", -- 7 = 7
+        "0000000", -- 8 = 8
+        "0011000", -- 9 = 9
+        "0001000", -- 10 = A
+        "0000011", -- 11 = B
+        "0000110", -- 12 = C
+        "0100001", -- 13 = D 
+        "0000110", -- 14 = E
+        "0001110", -- 15 = F
+        "0111111"  -- 16 = -
+    );
+
+    -- Declare functions
+    fn_ascii_to_7seg(ascii_char : in std_logic_vector(7 downto 0)) 
+    return std_logic_vector;
+end package seven_seg_pkg;
+package body seven_seg_pkg is
+
+    --Package body
+
+
+architecture rtl of top_level is
+    
+
+    fn_ascii_to_7seg(ascii_char : in std_logic_vector(7 downto 0)) return std_logic_vector is
+        variable v_return_vector : std_logic_vector(6 downto 0);
+        variable v_ascii_char_natural : natural range 0 to 255;
+    begin
+    v_ascii_char_natural := to_integer(unsigned(ascii_char));
+    
+    case v_ascii_char_natural is
+        when 48 => -- ASCII "0"
+            v_return_vector := c_7seg_numbers(0);
+        when 49 => -- ASCII "1"
+            v_return_vector := c_7seg_numbers(1);
+        when 50 => -- ASCII "2"
+            v_return_vector := c_7seg_numbers(2);
+        when 51 => -- ASCII "3"
+            v_return_vector := c_7seg_numbers(3);
+        when 52 => -- ASCII "4"
+            v_return_vector := c_7seg_numbers(4);
+        when 53 => -- ASCII "5"
+            v_return_vector := c_7seg_numbers(5);
+        when 54 => -- ASCII "6"
+            v_return_vector := c_7seg_numbers(6);
+        when 55 => -- ASCII "7"
+            v_return_vector := c_7seg_numbers(7);
+        when 56 => -- ASCII "8"
+            v_return_vector := c_7seg_numbers(8);
+        when 57 => -- ASCII "9"
+            v_return_vector := c_7seg_numbers(9);
+        when 65 => -- ASCII "A"
+            v_return_vector := c_7seg_numbers(10);
+        when 66 => -- ASCII "B"
+            v_return_vector := c_7seg_numbers(11);
+        when 67 => -- ASCII "C"
+            v_return_vector := c_7seg_numbers(12);
+        when 68 => -- ASCII "D"
+            v_return_vector := c_7seg_numbers(13);
+        when 69 => -- ASCII "E"
+            v_return_vector := c_7seg_numbers(14);
+        when 70 => -- ASCII "F"
+            v_return_vector := c_7seg_numbers(15);
+        when others => -- ASCII "-"
+            v_return_vector := c_7seg_numbers(16);
+    end case;
+
+    return v_return_vector;
+    end function fn_ascii_to_7seg;
+end package body seven_seg_pkg;
+
+begin
+    -- Instantiate the UART
+    i_serial_uart : entity work.serial_uart
+        port map(
+            clock_50 => key_n(1),
+            reset_n  => key_n(0),
+            -- uart_rxd =>
+            -- received_data_valid =>,
+            received_data => hex0,
+            received_error => ledr(1),
+
+        );
+
+
+    process(clock_50, reset_n)
+    begin
+        if reset_n = '0' then
+            -- reset_n code
+        elsif rising_edge(clock_50) then
+            -- clocked code
+        end if;
+    end process;
+
+end architecture rtl;
