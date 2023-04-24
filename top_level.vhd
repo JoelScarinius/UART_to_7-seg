@@ -8,6 +8,8 @@ entity top_level is
     port (
         clock_50 : in std_logic;
         key_n    : in std_logic;
+        uart_rxd : in std_logic;
+        uart_txd : out std_logic;
         hex0     : out std_logic_vector(6 downto 0);
         ledr     : out std_logic_vector(1 downto 0)
     );
@@ -17,8 +19,8 @@ architecture rtl of top_level is
 
     signal s_hex0                : std_logic_vector(6 downto 0);
     signal s_ledr                : std_logic;
-    signal s_uart_rxd            : std_logic;
-    signal s_uart_txd            : std_logic;
+    -- signal s_uart_rxd            : std_logic;
+    -- signal s_uart_txd            : std_logic;
     signal s_received_data       : std_logic_vector(7 downto 0);
     signal s_received_data_valid : std_logic;
     signal s_received_error      : std_logic;
@@ -50,8 +52,8 @@ begin
         port map (
             clk                   => clock_50,
             reset                 => s_reset_n_2r,
-            rx                    => s_uart_rxd,
-            tx                    => s_uart_txd,
+            rx                    => uart_rxd,
+            tx                    => uart_txd,
 
             received_data         => s_received_data,
             received_data_valid   => s_received_data_valid,
@@ -73,7 +75,7 @@ begin
     p_double_sync : process(clock_50)
     begin
         if rising_edge(clock_50) then
-            s_uart_rxd_r  <= s_uart_rxd;
+            s_uart_rxd_r  <= uart_rxd;
             s_uart_rxd_2r <= s_uart_rxd_r;
             s_reset_n_r   <= s_reset_n;
             s_reset_n_2r  <= s_reset_n_r;

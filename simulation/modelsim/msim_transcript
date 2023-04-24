@@ -147,3 +147,36 @@ do ../../run_sim.txt
 #    Time: 10 ns  Iteration: 0  Instance: /top_level
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 30 ns  Iteration: 0  Instance: /top_level
+f
+# ambiguous command name "f": fblocked fconfigure fcopy fcover file fileevent find findExec flush for force foreach format formatTime
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
+# Loading work.top_level(rtl)
+# Warning in wave window restart: (vish-4014) No objects found matching '/top_level/s_uart_rxd'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/top_level/s_uart_txd'. 
+# ** Error: (vish-4008) Object 's_uart_rxd' not found.
+# Error in macro ./../../run_sim.txt line 8
+# ** Error: (vish-4008) Object 's_uart_rxd' not found.
+# 
+#     while executing
+# "force s_uart_rxd 1"
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
