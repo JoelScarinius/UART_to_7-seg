@@ -1,0 +1,149 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do top_level_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab5/seven_seg_pkg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# vcom -93 -work work {C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab5/serial_uart_rtl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# vcom -93 -work work {C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab5/LED_Blink.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LED_Blink
+# -- Compiling architecture rtl of LED_Blink
+# vcom -93 -work work {C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab5/top_level.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
+# 
+vsim work.top_level
+# vsim work.top_level 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.serial_uart(rtl)
+# Loading work.led_blink(rtl)
+add wave -position end  sim:/top_level/clock_50
+add wave -position end  sim:/top_level/key_n
+add wave -position end  sim:/top_level/hex0
+add wave -position end  sim:/top_level/ledr
+add wave -position end  sim:/top_level/s_hex0
+add wave -position end  sim:/top_level/s_ledr
+add wave -position end  sim:/top_level/s_uart_rxd
+add wave -position end  sim:/top_level/s_uart_txd
+add wave -position end  sim:/top_level/s_received_data
+add wave -position end  sim:/top_level/s_received_data_valid
+add wave -position end  sim:/top_level/s_received_error
+add wave -position end  sim:/top_level/s_transmit_ready
+add wave -position end  sim:/top_level/s_transmit_data_valid
+add wave -position end  sim:/top_level/s_transmit_data
+add wave -position end  sim:/top_level/s_uart_rxd_r
+add wave -position end  sim:/top_level/s_uart_rxd_2r
+add wave -position end  sim:/top_level/s_reset_n
+add wave -position end  sim:/top_level/s_reset_n_r
+add wave -position end  sim:/top_level/s_reset_n_2r
+
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
+# Loading work.top_level(rtl)
+# ** Error: evaluating expression "key_n(0)"
+# Cannot take a slice or index of non-array object "/top_level/key_n".
+# Error in macro ./../../run_sim.txt line 7
+# evaluating expression "key_n(0)"
+# Cannot take a slice or index of non-array object "/top_level/key_n".
+# 
+#     while executing
+# "force key_n(0) 0"
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
+# Loading work.top_level(rtl)
+# ** Error: (vish-4008) Object 'uart_rxd' not found.
+# Error in macro ./../../run_sim.txt line 8
+# ** Error: (vish-4008) Object 'uart_rxd' not found.
+# 
+#     while executing
+# "force uart_rxd 1"
+
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
+# Loading work.top_level(rtl)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /top_level
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 0  Instance: /top_level
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
+# Loading work.top_level(rtl)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /top_level
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 0  Instance: /top_level

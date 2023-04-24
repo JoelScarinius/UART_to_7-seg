@@ -4,7 +4,6 @@ library ieee;
 library work;
     use work.seven_seg_pkg.all;
 
-
 entity top_level is
     port (
         clock_50 : in std_logic;
@@ -84,9 +83,9 @@ begin
     p_run_top_level_design : process(clock_50, s_reset_n_2r)
     begin
         if (s_reset_n_2r = '0') then
-            s_hex0 <= "11111111"; -- off
-            s_ledr <= '0'; -- off
-            s_received_error <= '0'; -- off
+            s_hex0 <= "1111111"; -- off
+            -- s_ledr <= '0'; -- off
+            -- s_received_error <= '0'; -- off
         elsif rising_edge(clock_50) then
             s_hex0 <= fn_ascii_to_7seg(s_received_data);
         end if;

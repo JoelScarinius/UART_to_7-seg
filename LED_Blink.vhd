@@ -13,7 +13,8 @@ end entity LED_Blink;
 architecture rtl of LED_Blink is
 
 	-- Constant and type declarations
-	constant c_500ms_count_max : integer := 25000000;
+	-- constant c_500ms_count_max : integer := 25000000;
+	constant c_500ms_count_max : integer := 25;
 	
 	-- Internal signal declarations
 	signal s_reset_n           : std_logic;

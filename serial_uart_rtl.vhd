@@ -77,9 +77,6 @@ architecture rtl of serial_uart is
    signal tx_byte_saved          : std_logic_vector(7 downto 0);
    signal tx_parity_bit          : std_logic;
 
-   -- signal received_data_valid         : std_logic;
-   -- signal transmit_data          : std_logic;
-
 begin
 
    -- p_double_sync process
