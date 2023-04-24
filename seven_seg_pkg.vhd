@@ -26,7 +26,7 @@ package seven_seg_pkg is
     );
 
     -- Declare functions
-    fn_ascii_to_7seg(
+    function fn_ascii_to_7seg(
         ascii_char : in std_logic_vector(7 downto 0))
         return std_logic_vector;
 end package seven_seg_pkg;

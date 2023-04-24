@@ -77,6 +77,9 @@ architecture rtl of serial_uart is
    signal tx_byte_saved          : std_logic_vector(7 downto 0);
    signal tx_parity_bit          : std_logic;
 
+   -- signal received_data_valid         : std_logic;
+   -- signal transmit_data          : std_logic;
+
 begin
 
    -- p_double_sync process
@@ -101,7 +104,7 @@ begin
       if rising_edge(clk) then
 
          -- Default assignments
-         received_valid          <= '0';
+         received_data_valid     <= '0';
          rx_bit_cnt_en           <= '0';
 
          case rx_state is
@@ -163,7 +166,7 @@ begin
                if rx_bit_cnt_wrap = '1' then
                   -- Set error high if rx signal is low on stop bit
                   received_error <= not rx_2r;
-                  received_valid <= rx_2r;
+                  received_data_valid <= rx_2r;
                   rx_state       <= s_idle;
                else
                   rx_bit_cnt_en  <= '1';
@@ -195,7 +198,7 @@ begin
          case tx_state is
             when s_idle =>
                tx_parity_bit  <= '0';
-               if transmit_valid = '1' then
+               if transmit_data_valid = '1' then
                   tx_byte_saved  <= transmit_data;
                   transmit_ready <= '0';
                   tx_state       <= s_start_bit;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART_to_7-seg
-Mon Apr 24 09:58:45 2023
+Mon Apr 24 13:00:22 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Apr 24 09:58:45 2023               ;
+; Analysis & Synthesis Status        ; Failed - Mon Apr 24 13:00:22 2023               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; UART_to_7-seg                                   ;
 ; Top-level Entity Name              ; UART_to_7-seg                                   ;
@@ -155,18 +155,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Apr 24 09:58:45 2023
+    Info: Processing started: Mon Apr 24 13:00:21 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART_to_7-seg -c UART_to_7-seg
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
-    Info (12022): Found design unit 1: top_level-rtl
-    Info (12023): Found entity 1: top_level
-Error (10481): VHDL Use Clause error at top_level.vhd(5): design library "work" does not contain primary unit "seven_seg_pkg" File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab5/top_level.vhd Line: 5
-Error (10800): VHDL error at top_level.vhd(5): selected name in use clause is not an expanded name File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab5/top_level.vhd Line: 5
+Info (12021): Found 2 design units, including 0 entities, in source file seven_seg_pkg.vhd
+    Info (12022): Found design unit 1: seven_seg_pkg
+    Info (12022): Found design unit 2: seven_seg_pkg-body
+Info (12021): Found 2 design units, including 1 entities, in source file serial_uart_rtl.vhd
+    Info (12022): Found design unit 1: serial_uart-rtl
+    Info (12023): Found entity 1: serial_uart
+Info (12021): Found 2 design units, including 1 entities, in source file led_blink.vhd
+    Info (12022): Found design unit 1: LED_Blink-rtl
+    Info (12023): Found entity 1: LED_Blink
+Error (10500): VHDL syntax error at top_level.vhd(8) near text "-";  expecting "is" File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab5/top_level.vhd Line: 8
+Error (10500): VHDL syntax error at top_level.vhd(17) near text "-";  expecting "is" File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab5/top_level.vhd Line: 17
+Info (12021): Found 0 design units, including 0 entities, in source file top_level.vhd
 Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
     Error: Peak virtual memory: 4618 megabytes
-    Error: Processing ended: Mon Apr 24 09:58:45 2023
-    Error: Elapsed time: 00:00:00
+    Error: Processing ended: Mon Apr 24 13:00:22 2023
+    Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:00
 
 

@@ -5,8 +5,8 @@ library ieee;
 entity LED_Blink is
 port(
 	clock_50 : in std_logic; -- 50 MHz clock
-	key_n    : in std_logic_vector(1 downto 0);
-	ledr     : out std_logic;
+	key_n    : in std_logic;
+	ledr     : out std_logic
 	);
 end entity LED_Blink;
 
@@ -23,10 +23,10 @@ architecture rtl of LED_Blink is
 begin
 	-- Assign internal signals from entity inputs
 	-- Active low reset reset from KEY0
-	s_reset_n <= key_n(0);
+	s_reset_n <= key_n;
 	
 	-- Assign internal signals to entity outputs
-	ledr <= (others => s_led);
+	ledr <= s_led;
 	
 	p_tick : process(clock_50, s_reset_n)
 	begin
