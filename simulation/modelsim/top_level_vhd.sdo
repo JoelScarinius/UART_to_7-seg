@@ -24,7 +24,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "top_level")
-  (DATE "04/24/2023 13:47:51")
+  (DATE "04/25/2023 13:59:00")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition")
@@ -33,7 +33,7 @@
 
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\i_LED_Blink\|s_counter_500ms\[2\]\\)
+    (INSTANCE \\i_LED_Blink\|counter_500ms\[2\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -147,7 +147,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\i_LED_Blink\|s_counter_500ms\[2\]\~9\\)
+    (INSTANCE \\i_LED_Blink\|counter_500ms\[2\]\~9\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (386:386:386) (386:386:386))
@@ -864,7 +864,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\s_reset_n_r\~feeder\\)
+    (INSTANCE \\reset_n_r\~feeder\\)
     (DELAY
       (ABSOLUTE
         (PORT datac (6638:6638:6638) (6638:6638:6638))
@@ -874,7 +874,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE s_reset_n_r)
+    (INSTANCE reset_n_r)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -888,7 +888,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\s_reset_n_2r\~feeder\\)
+    (INSTANCE \\reset_n_2r\~feeder\\)
     (DELAY
       (ABSOLUTE
         (PORT datad (354:354:354) (354:354:354))
@@ -898,7 +898,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE s_reset_n_2r)
+    (INSTANCE reset_n_2r)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -2397,7 +2397,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\s_hex0\[0\]\\)
+    (INSTANCE \\seven_seg_vector\[0\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -2573,7 +2573,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\s_hex0\[1\]\\)
+    (INSTANCE \\seven_seg_vector\[1\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1573:1573:1573) (1573:1573:1573))
@@ -2637,7 +2637,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\s_hex0\[2\]\\)
+    (INSTANCE \\seven_seg_vector\[2\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -2700,7 +2700,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\s_hex0\[3\]\\)
+    (INSTANCE \\seven_seg_vector\[3\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -2822,7 +2822,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\s_hex0\[4\]\\)
+    (INSTANCE \\seven_seg_vector\[4\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -2899,7 +2899,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\s_hex0\[5\]\\)
+    (INSTANCE \\seven_seg_vector\[5\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -2963,7 +2963,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\s_hex0\[6\]\\)
+    (INSTANCE \\seven_seg_vector\[6\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -2979,7 +2979,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\i_LED_Blink\|s_counter_500ms\[0\]\~5\\)
+    (INSTANCE \\i_LED_Blink\|counter_500ms\[0\]\~5\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (368:368:368) (368:368:368))
@@ -2991,7 +2991,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\i_LED_Blink\|s_counter_500ms\[3\]\~11\\)
+    (INSTANCE \\i_LED_Blink\|counter_500ms\[3\]\~11\\)
     (DELAY
       (ABSOLUTE
         (PORT datab (368:368:368) (368:368:368))
@@ -3005,7 +3005,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\i_LED_Blink\|s_counter_500ms\[4\]\~13\\)
+    (INSTANCE \\i_LED_Blink\|counter_500ms\[4\]\~13\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (384:384:384) (384:384:384))
@@ -3016,7 +3016,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\i_LED_Blink\|s_counter_500ms\[4\]\\)
+    (INSTANCE \\i_LED_Blink\|counter_500ms\[4\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -3046,7 +3046,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\i_LED_Blink\|s_counter_500ms\[0\]\\)
+    (INSTANCE \\i_LED_Blink\|counter_500ms\[0\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -3064,7 +3064,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\i_LED_Blink\|s_counter_500ms\[1\]\~7\\)
+    (INSTANCE \\i_LED_Blink\|counter_500ms\[1\]\~7\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (386:386:386) (386:386:386))
@@ -3078,7 +3078,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\i_LED_Blink\|s_counter_500ms\[3\]\\)
+    (INSTANCE \\i_LED_Blink\|counter_500ms\[3\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -3096,7 +3096,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\i_LED_Blink\|s_counter_500ms\[1\]\\)
+    (INSTANCE \\i_LED_Blink\|counter_500ms\[1\]\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -3130,7 +3130,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\i_LED_Blink\|s_tick\~0\\)
+    (INSTANCE \\i_LED_Blink\|tick\~0\\)
     (DELAY
       (ABSOLUTE
         (PORT dataa (390:390:390) (390:390:390))
@@ -3145,7 +3145,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\i_LED_Blink\|s_tick\\)
+    (INSTANCE \\i_LED_Blink\|tick\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))
@@ -3159,7 +3159,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\i_LED_Blink\|s_led\~0\\)
+    (INSTANCE \\i_LED_Blink\|led\~0\\)
     (DELAY
       (ABSOLUTE
         (PORT datad (356:356:356) (356:356:356))
@@ -3170,7 +3170,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_ff")
-    (INSTANCE \\i_LED_Blink\|s_led\\)
+    (INSTANCE \\i_LED_Blink\|led\\)
     (DELAY
       (ABSOLUTE
         (PORT clk (1572:1572:1572) (1572:1572:1572))

@@ -1,5 +1,5 @@
 Fitter report for top_level
-Mon Apr 24 13:47:47 2023
+Tue Apr 25 13:58:55 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Apr 24 13:47:47 2023           ;
+; Fitter Status                      ; Successful - Tue Apr 25 13:58:55 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top_level                                       ;
 ; Top-level Entity Name              ; top_level                                       ;
@@ -918,7 +918,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------------------+---------+
 ; clock_50                                     ;                   ;         ;
 ; key_n                                        ;                   ;         ;
-;      - s_reset_n_r~feeder                    ; 0                 ; 6       ;
+;      - reset_n_r~feeder                      ; 0                 ; 6       ;
 ; uart_rxd                                     ;                   ;         ;
 ;      - serial_uart:i_serial_uart|rx_r~feeder ; 0                 ; 6       ;
 +----------------------------------------------+-------------------+---------+
@@ -931,7 +931,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; LED_Blink:i_LED_Blink|LessThan0~1             ; LCCOMB_X24_Y20_N18 ; 5       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; clock_50                                      ; PIN_L1             ; 81      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; s_reset_n_2r                                  ; LCFF_X24_Y20_N31   ; 15      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; reset_n_2r                                    ; LCFF_X24_Y20_N31   ; 15      ; Async. clear ; no     ; --                   ; --               ; --                        ;
 ; serial_uart:i_serial_uart|received_data[6]~10 ; LCCOMB_X22_Y20_N14 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; serial_uart:i_serial_uart|reset_2r            ; LCFF_X22_Y20_N11   ; 18      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; serial_uart:i_serial_uart|rx_bit_cnt[0]~37    ; LCCOMB_X22_Y22_N30 ; 13      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
@@ -954,7 +954,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                           ; Fan-Out ;
 +------------------------------------------------+---------+
 ; serial_uart:i_serial_uart|reset_2r             ; 18      ;
-; s_reset_n_2r                                   ; 15      ;
+; reset_n_2r                                     ; 15      ;
 ; serial_uart:i_serial_uart|tx_bit_cnt[0]~37     ; 13      ;
 ; serial_uart:i_serial_uart|rx_bit_cnt[0]~37     ; 13      ;
 ; serial_uart:i_serial_uart|received_data[3]     ; 13      ;
@@ -1008,7 +1008,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; serial_uart:i_serial_uart|rx_bit_cnt[2]        ; 3       ;
 ; serial_uart:i_serial_uart|rx_bit_cnt[12]       ; 3       ;
 ; serial_uart:i_serial_uart|rx_bit_cnt[10]       ; 3       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[4]       ; 3       ;
+; LED_Blink:i_LED_Blink|counter_500ms[4]         ; 3       ;
 ; serial_uart:i_serial_uart|Selector1~0          ; 2       ;
 ; serial_uart:i_serial_uart|rx_bit_no~0          ; 2       ;
 ; serial_uart:i_serial_uart|tx_bit_no~0          ; 2       ;
@@ -1022,10 +1022,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LED_Blink:i_LED_Blink|LessThan0~0              ; 2       ;
 ; serial_uart:i_serial_uart|rx_byte_int[0]       ; 2       ;
 ; serial_uart:i_serial_uart|Selector29~0         ; 2       ;
-; LED_Blink:i_LED_Blink|s_tick                   ; 2       ;
+; LED_Blink:i_LED_Blink|tick                     ; 2       ;
 ; Mux2~1                                         ; 2       ;
 ; Mux5~0                                         ; 2       ;
-; LED_Blink:i_LED_Blink|s_led                    ; 2       ;
+; LED_Blink:i_LED_Blink|led                      ; 2       ;
 ; serial_uart:i_serial_uart|tx_bit_cnt_en        ; 2       ;
 ; serial_uart:i_serial_uart|tx_bit_cnt[9]        ; 2       ;
 ; serial_uart:i_serial_uart|tx_bit_cnt[8]        ; 2       ;
@@ -1039,10 +1039,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; serial_uart:i_serial_uart|tx_bit_cnt[0]        ; 2       ;
 ; serial_uart:i_serial_uart|tx_bit_cnt[12]       ; 2       ;
 ; serial_uart:i_serial_uart|tx_bit_cnt[10]       ; 2       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[3]       ; 2       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[2]       ; 2       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[1]       ; 2       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[0]       ; 2       ;
+; LED_Blink:i_LED_Blink|counter_500ms[3]         ; 2       ;
+; LED_Blink:i_LED_Blink|counter_500ms[2]         ; 2       ;
+; LED_Blink:i_LED_Blink|counter_500ms[1]         ; 2       ;
+; LED_Blink:i_LED_Blink|counter_500ms[0]         ; 2       ;
 ; serial_uart:i_serial_uart|received_error       ; 2       ;
 ; uart_rxd                                       ; 1       ;
 ; key_n                                          ; 1       ;
@@ -1082,8 +1082,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; serial_uart:i_serial_uart|rx_r                 ; 1       ;
 ; serial_uart:i_serial_uart|rx_bit_cnt_wrap~0    ; 1       ;
 ; serial_uart:i_serial_uart|LessThan0~1          ; 1       ;
-; LED_Blink:i_LED_Blink|s_tick~0                 ; 1       ;
-; s_reset_n_r                                    ; 1       ;
+; LED_Blink:i_LED_Blink|tick~0                   ; 1       ;
+; reset_n_r                                      ; 1       ;
 ; serial_uart:i_serial_uart|received_data~9      ; 1       ;
 ; serial_uart:i_serial_uart|received_data~8      ; 1       ;
 ; serial_uart:i_serial_uart|received_data~7      ; 1       ;
@@ -1095,7 +1095,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; serial_uart:i_serial_uart|tx_state~7           ; 1       ;
 ; serial_uart:i_serial_uart|Selector29~1         ; 1       ;
 ; serial_uart:i_serial_uart|received_error~0     ; 1       ;
-; LED_Blink:i_LED_Blink|s_led~0                  ; 1       ;
+; LED_Blink:i_LED_Blink|led~0                    ; 1       ;
 ; Mux0~3                                         ; 1       ;
 ; Mux0~2                                         ; 1       ;
 ; Mux0~1                                         ; 1       ;
@@ -1124,13 +1124,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Mux6~1                                         ; 1       ;
 ; Mux6~0                                         ; 1       ;
 ; serial_uart:i_serial_uart|tx~0                 ; 1       ;
-; s_hex0[6]                                      ; 1       ;
-; s_hex0[5]                                      ; 1       ;
-; s_hex0[4]                                      ; 1       ;
-; s_hex0[3]                                      ; 1       ;
-; s_hex0[2]                                      ; 1       ;
-; s_hex0[1]                                      ; 1       ;
-; s_hex0[0]                                      ; 1       ;
+; seven_seg_vector[6]                            ; 1       ;
+; seven_seg_vector[5]                            ; 1       ;
+; seven_seg_vector[4]                            ; 1       ;
+; seven_seg_vector[3]                            ; 1       ;
+; seven_seg_vector[2]                            ; 1       ;
+; seven_seg_vector[1]                            ; 1       ;
+; seven_seg_vector[0]                            ; 1       ;
 ; serial_uart:i_serial_uart|tx                   ; 1       ;
 ; serial_uart:i_serial_uart|tx_bit_cnt[12]~38    ; 1       ;
 ; serial_uart:i_serial_uart|tx_bit_cnt[11]~36    ; 1       ;
@@ -1182,15 +1182,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; serial_uart:i_serial_uart|rx_bit_cnt[1]~15     ; 1       ;
 ; serial_uart:i_serial_uart|rx_bit_cnt[0]~14     ; 1       ;
 ; serial_uart:i_serial_uart|rx_bit_cnt[0]~13     ; 1       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[4]~13    ; 1       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[3]~12    ; 1       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[3]~11    ; 1       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[2]~10    ; 1       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[2]~9     ; 1       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[1]~8     ; 1       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[1]~7     ; 1       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[0]~6     ; 1       ;
-; LED_Blink:i_LED_Blink|s_counter_500ms[0]~5     ; 1       ;
+; LED_Blink:i_LED_Blink|counter_500ms[4]~13      ; 1       ;
+; LED_Blink:i_LED_Blink|counter_500ms[3]~12      ; 1       ;
+; LED_Blink:i_LED_Blink|counter_500ms[3]~11      ; 1       ;
+; LED_Blink:i_LED_Blink|counter_500ms[2]~10      ; 1       ;
+; LED_Blink:i_LED_Blink|counter_500ms[2]~9       ; 1       ;
+; LED_Blink:i_LED_Blink|counter_500ms[1]~8       ; 1       ;
+; LED_Blink:i_LED_Blink|counter_500ms[1]~7       ; 1       ;
+; LED_Blink:i_LED_Blink|counter_500ms[0]~6       ; 1       ;
+; LED_Blink:i_LED_Blink|counter_500ms[0]~5       ; 1       ;
 +------------------------------------------------+---------+
 
 
@@ -1389,7 +1389,7 @@ Info (176353): Automatically promoted node clock_50 (placed in PIN L1 (CLK0, LVD
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1401,7 +1401,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 10 output pins without output pin load capacitance assignment
     Info (306007): Pin "uart_txd" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1422,7 +1422,7 @@ Warning (169174): The Reserve All Unused Pins setting has not been specified, an
 Info (144001): Generated suppressed messages file C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab5/output_files/top_level.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4783 megabytes
-    Info: Processing ended: Mon Apr 24 13:47:47 2023
+    Info: Processing ended: Tue Apr 25 13:58:55 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

@@ -17,30 +17,26 @@ end top_level;
 
 architecture rtl of top_level is
 
-    signal s_hex0                : std_logic_vector(6 downto 0);
-    signal s_ledr                : std_logic;
-    -- signal s_uart_rxd            : std_logic;
-    -- signal s_uart_txd            : std_logic;
-    signal s_received_data       : std_logic_vector(7 downto 0);
-    signal s_received_data_valid : std_logic;
-    signal s_received_error      : std_logic;
-    signal s_transmit_ready      : std_logic;
-    signal s_transmit_data_valid : std_logic;
-    signal s_transmit_data       : std_logic_vector(7 downto 0);
+    signal seven_seg_vector    : std_logic_vector(6 downto 0);
+    signal led                : std_logic;
+    signal received_data       : std_logic_vector(7 downto 0);
+    signal received_data_valid : std_logic;
+    signal received_error      : std_logic;
+    signal transmit_ready      : std_logic;
+    signal transmit_data_valid : std_logic;
+    signal transmit_data       : std_logic_vector(7 downto 0);
     
     -- double synchronize
-    signal s_uart_rxd_r  : std_logic;
-    signal s_uart_rxd_2r : std_logic;
-    signal s_reset_n     : std_logic;
-    signal s_reset_n_r   : std_logic;
-    signal s_reset_n_2r  : std_logic;
+    signal reset_n     : std_logic;
+    signal reset_n_r   : std_logic;
+    signal reset_n_2r  : std_logic;
 
 begin
 
-    s_reset_n <= key_n;
-    ledr(0) <= s_ledr;
-    ledr(1) <= s_received_error;
-    hex0    <= s_hex0;
+    reset_n <= key_n;
+    ledr(0) <= led;
+    ledr(1) <= received_error;
+    hex0    <= seven_seg_vector;
 
     i_serial_uart : entity work.serial_uart
         generic map (
@@ -51,45 +47,41 @@ begin
         )
         port map (
             clk                   => clock_50,
-            reset                 => s_reset_n_2r,
+            reset                 => reset_n_2r,
             rx                    => uart_rxd,
             tx                    => uart_txd,
 
-            received_data         => s_received_data,
-            received_data_valid   => s_received_data_valid,
-            received_error        => s_received_error,
+            received_data         => received_data,
+            received_data_valid   => received_data_valid,
+            received_error        => received_error,
             received_parity_error => open,
 
-            transmit_ready        => s_transmit_ready,
-            transmit_data_valid   => s_transmit_data_valid,
-            transmit_data         => s_transmit_data
+            transmit_ready        => transmit_ready,
+            transmit_data_valid   => transmit_data_valid,
+            transmit_data         => transmit_data
         );
 
     i_LED_Blink : entity work.LED_Blink
         port map (
             clock_50 => clock_50,
-            key_n    => s_reset_n_2r,
-            ledr     => s_ledr
+            key_n    => reset_n_2r,
+            ledr     => led
         );
 
     p_double_sync : process(clock_50)
     begin
         if rising_edge(clock_50) then
-            s_uart_rxd_r  <= uart_rxd;
-            s_uart_rxd_2r <= s_uart_rxd_r;
-            s_reset_n_r   <= s_reset_n;
-            s_reset_n_2r  <= s_reset_n_r;
+            reset_n_r   <= reset_n;
+            reset_n_2r  <= reset_n_r;
         end if;
     end process p_double_sync;
 
-    p_run_top_level_design : process(clock_50, s_reset_n_2r)
+    p_run_top_level_design : process(clock_50, reset_n_2r)
     begin
-        if (s_reset_n_2r = '0') then
-            s_hex0 <= "1111111"; -- off
-            -- s_ledr <= '0'; -- off
-            -- s_received_error <= '0'; -- off
+        if (reset_n_2r = '0') then
+            seven_seg_vector <= "1111111"; -- off
         elsif rising_edge(clock_50) then
-            s_hex0 <= fn_ascii_to_7seg(s_received_data);
+            seven_seg_vector <= fn_ascii_to_7seg(received_data);
         end if;
     end process p_run_top_level_design;
 end architecture;

@@ -13,19 +13,82 @@ force key_n 1
 run 100 ns
 
 # One bit is 104 us
-# In this case I run 5 bits, so 520 us
+# start bit
 force uart_rxd 0
-run 520 us
+run 104 us
 
-force uart_rxd 1
-run 1 ms
-
-# One bit is 104 us, so 8 bits is 832 us
+# LSB
 force uart_rxd 0
-run 728 us
+run 104 us
+
+force uart_rxd 0
+run 104 us
+
+force uart_rxd 0
+run 104 us
+
+force uart_rxd 0
+run 104 us
 
 force uart_rxd 1
 run 104 us
 
+force uart_rxd 1
+run 104 us
+
+force uart_rxd 1
+run 104 us
+
+# MSB
+force uart_rxd 1
+run 104 us
+
+# STOP bit
+force uart_rxd 1
+run 104 us
+
+run 1 ms
+
 force key_n 0
+force uart_rxd 1
 run 100 ns
+
+force key_n 1
+run 100 ns
+
+# One bit is 104 us
+# start bit
+force uart_rxd 0
+run 104 us
+
+# LSB
+force uart_rxd 1
+run 104 us
+
+force uart_rxd 1
+run 104 us
+
+force uart_rxd 0
+run 104 us
+
+force uart_rxd 0
+run 104 us
+
+force uart_rxd 0
+run 104 us
+
+force uart_rxd 0
+run 104 us
+
+force uart_rxd 0
+run 104 us
+
+# MSB
+force uart_rxd 0
+run 104 us
+
+# STOP bit
+force uart_rxd 1
+run 104 us
+
+run 1 ms

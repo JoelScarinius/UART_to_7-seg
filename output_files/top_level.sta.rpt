@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for top_level
-Mon Apr 24 13:47:50 2023
+Tue Apr 25 13:58:59 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -295,10 +295,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.445 ; serial_uart:i_serial_uart|rx_byte_int[2]       ; serial_uart:i_serial_uart|rx_byte_int[2]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; serial_uart:i_serial_uart|rx_byte_int[1]       ; serial_uart:i_serial_uart|rx_byte_int[1]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; serial_uart:i_serial_uart|rx_byte_int[0]       ; serial_uart:i_serial_uart|rx_byte_int[0]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; LED_Blink:i_LED_Blink|s_tick                   ; LED_Blink:i_LED_Blink|s_tick                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; LED_Blink:i_LED_Blink|s_led                    ; LED_Blink:i_LED_Blink|s_led                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.619 ; s_reset_n_r                                    ; s_reset_n_2r                                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.905      ;
-; 0.621 ; LED_Blink:i_LED_Blink|s_tick                   ; LED_Blink:i_LED_Blink|s_led                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.907      ;
+; 0.445 ; LED_Blink:i_LED_Blink|tick                     ; LED_Blink:i_LED_Blink|tick                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; LED_Blink:i_LED_Blink|led                      ; LED_Blink:i_LED_Blink|led                      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.619 ; reset_n_r                                      ; reset_n_2r                                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.905      ;
+; 0.621 ; LED_Blink:i_LED_Blink|tick                     ; LED_Blink:i_LED_Blink|led                      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.907      ;
 ; 0.629 ; serial_uart:i_serial_uart|rx_bit_cnt[12]       ; serial_uart:i_serial_uart|rx_bit_cnt[12]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.915      ;
 ; 0.650 ; serial_uart:i_serial_uart|tx_state.s_stop_bit  ; serial_uart:i_serial_uart|tx_state.s_idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.936      ;
 ; 0.650 ; serial_uart:i_serial_uart|tx_state.s_stop_bit  ; serial_uart:i_serial_uart|tx                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.936      ;
@@ -316,8 +316,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.967 ; serial_uart:i_serial_uart|tx_bit_cnt[0]        ; serial_uart:i_serial_uart|tx_bit_cnt[0]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.253      ;
 ; 0.974 ; serial_uart:i_serial_uart|rx_state.s_idle      ; serial_uart:i_serial_uart|rx_bit_cnt_en        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.260      ;
 ; 0.975 ; serial_uart:i_serial_uart|tx_bit_cnt[1]        ; serial_uart:i_serial_uart|tx_bit_cnt[1]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.261      ;
-; 0.976 ; LED_Blink:i_LED_Blink|s_counter_500ms[0]       ; LED_Blink:i_LED_Blink|s_counter_500ms[0]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.262      ;
-; 0.976 ; LED_Blink:i_LED_Blink|s_counter_500ms[3]       ; LED_Blink:i_LED_Blink|s_counter_500ms[3]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; LED_Blink:i_LED_Blink|counter_500ms[0]         ; LED_Blink:i_LED_Blink|counter_500ms[0]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; LED_Blink:i_LED_Blink|counter_500ms[3]         ; LED_Blink:i_LED_Blink|counter_500ms[3]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.262      ;
 ; 0.978 ; serial_uart:i_serial_uart|rx_byte_int[4]       ; serial_uart:i_serial_uart|rx_byte_int[3]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.264      ;
 ; 0.980 ; serial_uart:i_serial_uart|rx_bit_cnt[8]        ; serial_uart:i_serial_uart|rx_bit_cnt[8]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.266      ;
 ; 0.980 ; serial_uart:i_serial_uart|rx_bit_cnt_en        ; serial_uart:i_serial_uart|rx_bit_cnt_wrap      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.266      ;
@@ -334,22 +334,22 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.989 ; serial_uart:i_serial_uart|rx_bit_cnt[6]        ; serial_uart:i_serial_uart|rx_bit_cnt[6]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.275      ;
 ; 0.992 ; serial_uart:i_serial_uart|tx_bit_no[2]         ; serial_uart:i_serial_uart|tx_state.s_stop_bit  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.278      ;
 ; 0.995 ; serial_uart:i_serial_uart|tx_state.s_stop_bit  ; serial_uart:i_serial_uart|tx_bit_cnt_en        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.281      ;
-; 0.996 ; s_reset_n_2r                                   ; LED_Blink:i_LED_Blink|s_tick                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.282      ;
+; 0.996 ; reset_n_2r                                     ; LED_Blink:i_LED_Blink|tick                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.282      ;
 ; 1.013 ; serial_uart:i_serial_uart|rx_byte_int[3]       ; serial_uart:i_serial_uart|received_data[3]     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.299      ;
 ; 1.015 ; serial_uart:i_serial_uart|rx_bit_cnt[7]        ; serial_uart:i_serial_uart|rx_bit_cnt[7]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.301      ;
 ; 1.015 ; serial_uart:i_serial_uart|tx_bit_cnt[8]        ; serial_uart:i_serial_uart|tx_bit_cnt[8]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.301      ;
-; 1.015 ; LED_Blink:i_LED_Blink|s_counter_500ms[1]       ; LED_Blink:i_LED_Blink|s_counter_500ms[1]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.301      ;
-; 1.015 ; LED_Blink:i_LED_Blink|s_counter_500ms[2]       ; LED_Blink:i_LED_Blink|s_counter_500ms[2]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.301      ;
+; 1.015 ; LED_Blink:i_LED_Blink|counter_500ms[1]         ; LED_Blink:i_LED_Blink|counter_500ms[1]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.301      ;
+; 1.015 ; LED_Blink:i_LED_Blink|counter_500ms[2]         ; LED_Blink:i_LED_Blink|counter_500ms[2]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.301      ;
 ; 1.015 ; serial_uart:i_serial_uart|tx_state.s_tx_data   ; serial_uart:i_serial_uart|tx_bit_no[1]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.301      ;
 ; 1.016 ; serial_uart:i_serial_uart|rx_bit_cnt[9]        ; serial_uart:i_serial_uart|rx_bit_cnt[9]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.302      ;
 ; 1.016 ; serial_uart:i_serial_uart|rx_bit_cnt[11]       ; serial_uart:i_serial_uart|rx_bit_cnt[11]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.302      ;
 ; 1.016 ; serial_uart:i_serial_uart|tx_bit_cnt[10]       ; serial_uart:i_serial_uart|tx_bit_cnt[10]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; LED_Blink:i_LED_Blink|s_counter_500ms[4]       ; LED_Blink:i_LED_Blink|s_counter_500ms[4]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; LED_Blink:i_LED_Blink|counter_500ms[4]         ; LED_Blink:i_LED_Blink|counter_500ms[4]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.302      ;
 ; 1.018 ; serial_uart:i_serial_uart|tx_bit_cnt[3]        ; serial_uart:i_serial_uart|tx_bit_cnt[3]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.304      ;
 ; 1.019 ; serial_uart:i_serial_uart|tx_bit_cnt[5]        ; serial_uart:i_serial_uart|tx_bit_cnt[5]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.305      ;
 ; 1.019 ; serial_uart:i_serial_uart|tx_bit_cnt[12]       ; serial_uart:i_serial_uart|tx_bit_cnt[12]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.305      ;
 ; 1.022 ; serial_uart:i_serial_uart|rx_byte_int[2]       ; serial_uart:i_serial_uart|rx_byte_int[1]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.308      ;
-; 1.022 ; LED_Blink:i_LED_Blink|s_counter_500ms[4]       ; LED_Blink:i_LED_Blink|s_tick                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.308      ;
+; 1.022 ; LED_Blink:i_LED_Blink|counter_500ms[4]         ; LED_Blink:i_LED_Blink|tick                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.308      ;
 ; 1.024 ; serial_uart:i_serial_uart|tx_bit_cnt[6]        ; serial_uart:i_serial_uart|tx_bit_cnt[6]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.310      ;
 ; 1.024 ; serial_uart:i_serial_uart|rx_bit_cnt_half      ; serial_uart:i_serial_uart|rx_bit_cnt_en        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.310      ;
 ; 1.025 ; serial_uart:i_serial_uart|rx_bit_cnt_half      ; serial_uart:i_serial_uart|rx_state.s_idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.311      ;
@@ -365,12 +365,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 1.033 ; serial_uart:i_serial_uart|reset_2r             ; serial_uart:i_serial_uart|received_data[4]     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.319      ;
 ; 1.045 ; serial_uart:i_serial_uart|tx_state.s_tx_data   ; serial_uart:i_serial_uart|tx_bit_no[2]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.331      ;
 ; 1.067 ; serial_uart:i_serial_uart|reset_2r             ; serial_uart:i_serial_uart|received_data[3]     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.353      ;
-; 1.114 ; LED_Blink:i_LED_Blink|s_counter_500ms[1]       ; LED_Blink:i_LED_Blink|s_tick                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.400      ;
-; 1.142 ; serial_uart:i_serial_uart|received_data[0]     ; s_hex0[3]                                      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.428      ;
+; 1.114 ; LED_Blink:i_LED_Blink|counter_500ms[1]         ; LED_Blink:i_LED_Blink|tick                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.400      ;
+; 1.142 ; serial_uart:i_serial_uart|received_data[0]     ; seven_seg_vector[3]                            ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.428      ;
 ; 1.149 ; serial_uart:i_serial_uart|reset_2r             ; serial_uart:i_serial_uart|rx_state.s_rx_data   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.435      ;
 ; 1.149 ; serial_uart:i_serial_uart|reset_2r             ; serial_uart:i_serial_uart|rx_state.s_stop_bit  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.435      ;
 ; 1.149 ; serial_uart:i_serial_uart|reset_2r             ; serial_uart:i_serial_uart|received_error       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.435      ;
-; 1.179 ; serial_uart:i_serial_uart|received_data[7]     ; s_hex0[5]                                      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.465      ;
+; 1.179 ; serial_uart:i_serial_uart|received_data[7]     ; seven_seg_vector[5]                            ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.465      ;
 ; 1.217 ; serial_uart:i_serial_uart|rx_state.s_rx_data   ; serial_uart:i_serial_uart|rx_state.s_stop_bit  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.503      ;
 ; 1.232 ; serial_uart:i_serial_uart|tx_state.s_idle      ; serial_uart:i_serial_uart|tx_bit_no[1]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.518      ;
 ; 1.234 ; serial_uart:i_serial_uart|rx_state.s_stop_bit  ; serial_uart:i_serial_uart|received_error       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.520      ;
@@ -378,154 +378,154 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Recovery: 'clock_50'                                                                                                        ;
-+--------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node    ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.613 ; s_reset_n_2r ; s_hex0[1]                                ; clock_50     ; clock_50    ; 1.000        ; 0.001      ; 1.652      ;
-; -0.608 ; s_reset_n_2r ; s_hex0[5]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.646      ;
-; -0.442 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[0] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.442 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[1] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.442 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[2] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.442 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[3] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.442 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[4] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.442 ; s_reset_n_2r ; s_hex0[0]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.442 ; s_reset_n_2r ; s_hex0[2]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.442 ; s_reset_n_2r ; s_hex0[3]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.442 ; s_reset_n_2r ; s_hex0[4]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.442 ; s_reset_n_2r ; s_hex0[6]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.442 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_led              ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-+--------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'clock_50'                                                                                                    ;
++--------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.613 ; reset_n_2r ; seven_seg_vector[1]                    ; clock_50     ; clock_50    ; 1.000        ; 0.001      ; 1.652      ;
+; -0.608 ; reset_n_2r ; seven_seg_vector[5]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.646      ;
+; -0.442 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[0] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.442 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[1] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.442 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[2] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.442 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[3] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.442 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[4] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.442 ; reset_n_2r ; seven_seg_vector[0]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.442 ; reset_n_2r ; seven_seg_vector[2]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.442 ; reset_n_2r ; seven_seg_vector[3]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.442 ; reset_n_2r ; seven_seg_vector[4]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.442 ; reset_n_2r ; seven_seg_vector[6]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.442 ; reset_n_2r ; LED_Blink:i_LED_Blink|led              ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
++--------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Removal: 'clock_50'                                                                                                        ;
-+-------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node    ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 1.194 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[0] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.194 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[1] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.194 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[2] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.194 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[3] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.194 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[4] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.194 ; s_reset_n_2r ; s_hex0[0]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.194 ; s_reset_n_2r ; s_hex0[2]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.194 ; s_reset_n_2r ; s_hex0[3]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.194 ; s_reset_n_2r ; s_hex0[4]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.194 ; s_reset_n_2r ; s_hex0[6]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.194 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_led              ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.360 ; s_reset_n_2r ; s_hex0[5]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.646      ;
-; 1.365 ; s_reset_n_2r ; s_hex0[1]                                ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.652      ;
-+-------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'clock_50'                                                                                                    ;
++-------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.194 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[0] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.194 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[1] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.194 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[2] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.194 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[3] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.194 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[4] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.194 ; reset_n_2r ; seven_seg_vector[0]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.194 ; reset_n_2r ; seven_seg_vector[2]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.194 ; reset_n_2r ; seven_seg_vector[3]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.194 ; reset_n_2r ; seven_seg_vector[4]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.194 ; reset_n_2r ; seven_seg_vector[6]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.194 ; reset_n_2r ; LED_Blink:i_LED_Blink|led              ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.360 ; reset_n_2r ; seven_seg_vector[5]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.646      ;
+; 1.365 ; reset_n_2r ; seven_seg_vector[1]                    ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.652      ;
++-------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'clock_50'                                                                                     ;
-+--------+--------------+----------------+------------------+----------+------------+--------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                     ;
-+--------+--------------+----------------+------------------+----------+------------+--------------------------------------------+
-; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clock_50 ; Rise       ; clock_50                                   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[0]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[0]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[1]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[1]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[2]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[2]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[3]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[3]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[4]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[4]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_led                ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_led                ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_tick               ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_tick               ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[0]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[0]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[1]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[1]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[2]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[2]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[3]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[3]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[4]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[4]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[5]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[5]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[6]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[6]                                  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; s_reset_n_2r                               ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; s_reset_n_2r                               ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; s_reset_n_r                                ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; s_reset_n_r                                ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[0] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[0] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[1] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[1] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[2] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[2] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[3] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[3] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[4] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[4] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[5] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[5] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[6] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[6] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[7] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[7] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_error   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_error   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_2r         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_2r         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_r          ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_r          ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_2r            ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_2r            ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[0]    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[0]    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[10]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[10]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[11]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[11]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[12]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[12]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[1]    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[1]    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[2]    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[2]    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[3]    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[3]    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[4]    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[4]    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[5]    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[5]    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[6]    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[6]    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[7]    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[7]    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[8]    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[8]    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[9]    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[9]    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_en    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_en    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_half  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_half  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_wrap  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_wrap  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[0]     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[0]     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[1]     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[1]     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[2]     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[2]     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[0]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[0]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[1]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[1]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[2]   ;
-+--------+--------------+----------------+------------------+----------+------------+--------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock_50'                                                                                       ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                       ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clock_50 ; Rise       ; clock_50                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[0]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[0]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[1]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[1]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[2]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[2]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[3]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[3]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[4]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[4]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|led                    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|led                    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|tick                   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|tick                   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; reset_n_2r                                   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; reset_n_2r                                   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; reset_n_r                                    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; reset_n_r                                    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[2]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[2]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[3]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[3]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[4]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[4]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[5]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[5]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[6]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[6]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[7]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[7]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_error     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_error     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_2r           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_2r           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_r            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_r            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_2r              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_2r              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[0]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[0]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[10]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[10]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[11]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[11]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[12]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[12]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[1]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[1]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[2]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[2]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[3]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[3]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[4]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[4]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[5]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[5]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[6]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[6]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[7]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[7]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[8]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[8]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[9]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[9]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_en      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_en      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_half    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_half    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_wrap    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_wrap    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[0]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[0]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[1]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[1]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[2]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[2]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[5]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[5]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[6]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[6]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_r               ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_r               ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_state.s_idle    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_state.s_idle    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_state.s_rx_data ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -766,11 +766,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.215 ; serial_uart:i_serial_uart|rx_byte_int[2]       ; serial_uart:i_serial_uart|rx_byte_int[2]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; serial_uart:i_serial_uart|rx_byte_int[1]       ; serial_uart:i_serial_uart|rx_byte_int[1]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; serial_uart:i_serial_uart|rx_byte_int[0]       ; serial_uart:i_serial_uart|rx_byte_int[0]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; LED_Blink:i_LED_Blink|s_tick                   ; LED_Blink:i_LED_Blink|s_tick                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; LED_Blink:i_LED_Blink|s_led                    ; LED_Blink:i_LED_Blink|s_led                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.241 ; s_reset_n_r                                    ; s_reset_n_2r                                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.215 ; LED_Blink:i_LED_Blink|tick                     ; LED_Blink:i_LED_Blink|tick                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; LED_Blink:i_LED_Blink|led                      ; LED_Blink:i_LED_Blink|led                      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; reset_n_r                                      ; reset_n_2r                                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.393      ;
 ; 0.243 ; serial_uart:i_serial_uart|rx_bit_cnt[12]       ; serial_uart:i_serial_uart|rx_bit_cnt[12]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.395      ;
-; 0.243 ; LED_Blink:i_LED_Blink|s_tick                   ; LED_Blink:i_LED_Blink|s_led                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; LED_Blink:i_LED_Blink|tick                     ; LED_Blink:i_LED_Blink|led                      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.395      ;
 ; 0.258 ; serial_uart:i_serial_uart|tx_state.s_stop_bit  ; serial_uart:i_serial_uart|tx_state.s_idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.410      ;
 ; 0.259 ; serial_uart:i_serial_uart|tx_state.s_stop_bit  ; serial_uart:i_serial_uart|tx                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.411      ;
 ; 0.260 ; serial_uart:i_serial_uart|tx_state.s_tx_data   ; serial_uart:i_serial_uart|tx_bit_no[0]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.412      ;
@@ -791,8 +791,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.362 ; serial_uart:i_serial_uart|rx_byte_int[4]       ; serial_uart:i_serial_uart|rx_byte_int[3]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.514      ;
 ; 0.363 ; serial_uart:i_serial_uart|rx_bit_cnt[10]       ; serial_uart:i_serial_uart|rx_bit_cnt[10]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.515      ;
 ; 0.363 ; serial_uart:i_serial_uart|tx_bit_cnt[11]       ; serial_uart:i_serial_uart|tx_bit_cnt[11]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.515      ;
-; 0.363 ; LED_Blink:i_LED_Blink|s_counter_500ms[0]       ; LED_Blink:i_LED_Blink|s_counter_500ms[0]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.515      ;
-; 0.363 ; LED_Blink:i_LED_Blink|s_counter_500ms[3]       ; LED_Blink:i_LED_Blink|s_counter_500ms[3]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; LED_Blink:i_LED_Blink|counter_500ms[0]         ; LED_Blink:i_LED_Blink|counter_500ms[0]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; LED_Blink:i_LED_Blink|counter_500ms[3]         ; LED_Blink:i_LED_Blink|counter_500ms[3]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.515      ;
 ; 0.364 ; serial_uart:i_serial_uart|rx_bit_cnt[0]        ; serial_uart:i_serial_uart|rx_bit_cnt[0]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.516      ;
 ; 0.365 ; serial_uart:i_serial_uart|rx_bit_cnt[3]        ; serial_uart:i_serial_uart|rx_bit_cnt[3]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.517      ;
 ; 0.365 ; serial_uart:i_serial_uart|tx_bit_cnt[2]        ; serial_uart:i_serial_uart|tx_bit_cnt[2]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.517      ;
@@ -806,13 +806,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.371 ; serial_uart:i_serial_uart|rx_bit_cnt[9]        ; serial_uart:i_serial_uart|rx_bit_cnt[9]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.523      ;
 ; 0.371 ; serial_uart:i_serial_uart|tx_bit_cnt[8]        ; serial_uart:i_serial_uart|tx_bit_cnt[8]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.523      ;
 ; 0.371 ; serial_uart:i_serial_uart|tx_bit_cnt[10]       ; serial_uart:i_serial_uart|tx_bit_cnt[10]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; s_reset_n_2r                                   ; LED_Blink:i_LED_Blink|s_tick                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; reset_n_2r                                     ; LED_Blink:i_LED_Blink|tick                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.523      ;
 ; 0.372 ; serial_uart:i_serial_uart|rx_bit_cnt[11]       ; serial_uart:i_serial_uart|rx_bit_cnt[11]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.524      ;
 ; 0.372 ; serial_uart:i_serial_uart|rx_bit_cnt_en        ; serial_uart:i_serial_uart|rx_bit_cnt_half      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.524      ;
 ; 0.372 ; serial_uart:i_serial_uart|tx_bit_cnt[12]       ; serial_uart:i_serial_uart|tx_bit_cnt[12]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.524      ;
-; 0.373 ; LED_Blink:i_LED_Blink|s_counter_500ms[1]       ; LED_Blink:i_LED_Blink|s_counter_500ms[1]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.525      ;
-; 0.373 ; LED_Blink:i_LED_Blink|s_counter_500ms[4]       ; LED_Blink:i_LED_Blink|s_counter_500ms[4]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.525      ;
-; 0.374 ; LED_Blink:i_LED_Blink|s_counter_500ms[2]       ; LED_Blink:i_LED_Blink|s_counter_500ms[2]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.373 ; LED_Blink:i_LED_Blink|counter_500ms[1]         ; LED_Blink:i_LED_Blink|counter_500ms[1]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; LED_Blink:i_LED_Blink|counter_500ms[4]         ; LED_Blink:i_LED_Blink|counter_500ms[4]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374 ; LED_Blink:i_LED_Blink|counter_500ms[2]         ; LED_Blink:i_LED_Blink|counter_500ms[2]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.526      ;
 ; 0.374 ; serial_uart:i_serial_uart|tx_state.s_stop_bit  ; serial_uart:i_serial_uart|tx_bit_cnt_en        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.526      ;
 ; 0.375 ; serial_uart:i_serial_uart|tx_bit_cnt[3]        ; serial_uart:i_serial_uart|tx_bit_cnt[3]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.527      ;
 ; 0.376 ; serial_uart:i_serial_uart|tx_bit_cnt[5]        ; serial_uart:i_serial_uart|tx_bit_cnt[5]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.528      ;
@@ -822,7 +822,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.378 ; serial_uart:i_serial_uart|rx_bit_cnt[2]        ; serial_uart:i_serial_uart|rx_bit_cnt[2]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.530      ;
 ; 0.378 ; serial_uart:i_serial_uart|rx_bit_cnt[4]        ; serial_uart:i_serial_uart|rx_bit_cnt[4]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.530      ;
 ; 0.379 ; serial_uart:i_serial_uart|rx_bit_cnt[5]        ; serial_uart:i_serial_uart|rx_bit_cnt[5]        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.531      ;
-; 0.379 ; LED_Blink:i_LED_Blink|s_counter_500ms[4]       ; LED_Blink:i_LED_Blink|s_tick                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.531      ;
+; 0.379 ; LED_Blink:i_LED_Blink|counter_500ms[4]         ; LED_Blink:i_LED_Blink|tick                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.531      ;
 ; 0.387 ; serial_uart:i_serial_uart|rx_bit_cnt_half      ; serial_uart:i_serial_uart|rx_bit_cnt_en        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.539      ;
 ; 0.388 ; serial_uart:i_serial_uart|rx_bit_cnt_half      ; serial_uart:i_serial_uart|rx_state.s_idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.540      ;
 ; 0.388 ; serial_uart:i_serial_uart|tx_bit_cnt_wrap      ; serial_uart:i_serial_uart|tx_state.s_idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.540      ;
@@ -836,9 +836,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.404 ; serial_uart:i_serial_uart|reset_2r             ; serial_uart:i_serial_uart|received_data[4]     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.556      ;
 ; 0.405 ; serial_uart:i_serial_uart|rx_byte_int[3]       ; serial_uart:i_serial_uart|received_data[3]     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.557      ;
 ; 0.407 ; serial_uart:i_serial_uart|reset_2r             ; serial_uart:i_serial_uart|received_data[3]     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.559      ;
-; 0.420 ; LED_Blink:i_LED_Blink|s_counter_500ms[1]       ; LED_Blink:i_LED_Blink|s_tick                   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.572      ;
+; 0.420 ; LED_Blink:i_LED_Blink|counter_500ms[1]         ; LED_Blink:i_LED_Blink|tick                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.572      ;
 ; 0.456 ; serial_uart:i_serial_uart|rx_state.s_rx_data   ; serial_uart:i_serial_uart|rx_state.s_stop_bit  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.608      ;
-; 0.460 ; serial_uart:i_serial_uart|received_data[0]     ; s_hex0[3]                                      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.612      ;
+; 0.460 ; serial_uart:i_serial_uart|received_data[0]     ; seven_seg_vector[3]                            ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.612      ;
 ; 0.460 ; serial_uart:i_serial_uart|rx_2r                ; serial_uart:i_serial_uart|rx_byte_int[6]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.612      ;
 ; 0.460 ; serial_uart:i_serial_uart|rx_byte_int[3]       ; serial_uart:i_serial_uart|rx_byte_int[2]       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.612      ;
 ; 0.461 ; serial_uart:i_serial_uart|rx_bit_no[1]         ; serial_uart:i_serial_uart|rx_bit_no[0]         ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.613      ;
@@ -849,154 +849,154 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Recovery: 'clock_50'                                                                                                       ;
-+-------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node    ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.218 ; s_reset_n_2r ; s_hex0[1]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.814      ;
-; 0.222 ; s_reset_n_2r ; s_hex0[5]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.810      ;
-; 0.289 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[0] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.289 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[1] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.289 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[2] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.289 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[3] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.289 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[4] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.289 ; s_reset_n_2r ; s_hex0[0]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.289 ; s_reset_n_2r ; s_hex0[2]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.289 ; s_reset_n_2r ; s_hex0[3]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.289 ; s_reset_n_2r ; s_hex0[4]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.289 ; s_reset_n_2r ; s_hex0[6]                                ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.289 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_led              ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-+-------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'clock_50'                                                                                                   ;
++-------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.218 ; reset_n_2r ; seven_seg_vector[1]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.814      ;
+; 0.222 ; reset_n_2r ; seven_seg_vector[5]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.810      ;
+; 0.289 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[0] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[1] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[2] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[3] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[4] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289 ; reset_n_2r ; seven_seg_vector[0]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289 ; reset_n_2r ; seven_seg_vector[2]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289 ; reset_n_2r ; seven_seg_vector[3]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289 ; reset_n_2r ; seven_seg_vector[4]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289 ; reset_n_2r ; seven_seg_vector[6]                    ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289 ; reset_n_2r ; LED_Blink:i_LED_Blink|led              ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
++-------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Removal: 'clock_50'                                                                                                        ;
-+-------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node    ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.591 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[0] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[1] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[2] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[3] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_counter_500ms[4] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; s_reset_n_2r ; s_hex0[0]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; s_reset_n_2r ; s_hex0[2]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; s_reset_n_2r ; s_hex0[3]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; s_reset_n_2r ; s_hex0[4]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; s_reset_n_2r ; s_hex0[6]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; s_reset_n_2r ; LED_Blink:i_LED_Blink|s_led              ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-; 0.658 ; s_reset_n_2r ; s_hex0[5]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.810      ;
-; 0.662 ; s_reset_n_2r ; s_hex0[1]                                ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.814      ;
-+-------+--------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'clock_50'                                                                                                    ;
++-------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.591 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[0] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.591 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[1] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.591 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[2] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.591 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[3] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.591 ; reset_n_2r ; LED_Blink:i_LED_Blink|counter_500ms[4] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.591 ; reset_n_2r ; seven_seg_vector[0]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.591 ; reset_n_2r ; seven_seg_vector[2]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.591 ; reset_n_2r ; seven_seg_vector[3]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.591 ; reset_n_2r ; seven_seg_vector[4]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.591 ; reset_n_2r ; seven_seg_vector[6]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.591 ; reset_n_2r ; LED_Blink:i_LED_Blink|led              ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.658 ; reset_n_2r ; seven_seg_vector[5]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.810      ;
+; 0.662 ; reset_n_2r ; seven_seg_vector[1]                    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.814      ;
++-------+------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'clock_50'                                                                                     ;
-+--------+--------------+----------------+------------------+----------+------------+--------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                     ;
-+--------+--------------+----------------+------------------+----------+------------+--------------------------------------------+
-; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock_50 ; Rise       ; clock_50                                   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[0]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[0]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[1]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[1]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[2]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[2]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[3]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[3]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[4]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_counter_500ms[4]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_led                ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_led                ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_tick               ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|s_tick               ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[0]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[0]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[1]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[1]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[2]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[2]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[3]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[3]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[4]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[4]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[5]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[5]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; s_hex0[6]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; s_hex0[6]                                  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; s_reset_n_2r                               ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; s_reset_n_2r                               ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; s_reset_n_r                                ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; s_reset_n_r                                ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[0] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[0] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[1] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[1] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[2] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[2] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[3] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[3] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[4] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[4] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[5] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[5] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[6] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[6] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[7] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[7] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_error   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_error   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_2r         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_2r         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_r          ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_r          ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_2r            ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_2r            ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[0]    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[0]    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[10]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[10]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[11]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[11]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[12]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[12]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[1]    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[1]    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[2]    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[2]    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[3]    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[3]    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[4]    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[4]    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[5]    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[5]    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[6]    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[6]    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[7]    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[7]    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[8]    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[8]    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[9]    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[9]    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_en    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_en    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_half  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_half  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_wrap  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_wrap  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[0]     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[0]     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[1]     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[1]     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[2]     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[2]     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[0]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[0]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[1]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[1]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[2]   ;
-+--------+--------------+----------------+------------------+----------+------------+--------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock_50'                                                                                       ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                       ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock_50 ; Rise       ; clock_50                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|counter_500ms[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|led                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|led                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|tick                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; LED_Blink:i_LED_Blink|tick                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; reset_n_2r                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; reset_n_2r                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; reset_n_r                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; reset_n_r                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[4]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[4]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[5]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[5]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[6]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[6]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[7]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_data[7]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_error     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|received_error     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_2r           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_2r           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_r            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|reset_r            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_2r              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_2r              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_en      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_en      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_half    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_half    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_wrap    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_cnt_wrap    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_bit_no[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_byte_int[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_r               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_r               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_state.s_idle    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_state.s_idle    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; serial_uart:i_serial_uart|rx_state.s_rx_data ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -1203,7 +1203,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Apr 24 13:47:49 2023
+    Info: Processing started: Tue Apr 25 13:58:58 2023
 Info: Command: quartus_sta top_level -c top_level
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1263,8 +1263,8 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4527 megabytes
-    Info: Processing ended: Mon Apr 24 13:47:50 2023
+    Info: Peak virtual memory: 4528 megabytes
+    Info: Processing ended: Tue Apr 25 13:58:59 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

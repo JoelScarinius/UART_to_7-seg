@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "04/24/2023 13:47:51"
+-- DATE "04/25/2023 13:59:00"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484
@@ -76,7 +76,7 @@ SIGNAL ww_hex0 : std_logic_vector(6 DOWNTO 0);
 SIGNAL ww_ledr : std_logic_vector(1 DOWNTO 0);
 SIGNAL \clock_50~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \i_serial_uart|tx_bit_cnt_en~regout\ : std_logic;
-SIGNAL \i_LED_Blink|s_counter_500ms[2]~9_combout\ : std_logic;
+SIGNAL \i_LED_Blink|counter_500ms[2]~9_combout\ : std_logic;
 SIGNAL \i_serial_uart|rx_bit_cnt[2]~17_combout\ : std_logic;
 SIGNAL \i_serial_uart|rx_bit_cnt[7]~27_combout\ : std_logic;
 SIGNAL \i_serial_uart|rx_bit_cnt[11]~36\ : std_logic;
@@ -125,10 +125,10 @@ SIGNAL \i_serial_uart|LessThan2~3_combout\ : std_logic;
 SIGNAL \i_serial_uart|tx_bit_cnt_wrap~0_combout\ : std_logic;
 SIGNAL \i_serial_uart|tx_bit_cnt_wrap~regout\ : std_logic;
 SIGNAL \key_n~combout\ : std_logic;
-SIGNAL \s_reset_n_r~feeder_combout\ : std_logic;
-SIGNAL \s_reset_n_r~regout\ : std_logic;
-SIGNAL \s_reset_n_2r~feeder_combout\ : std_logic;
-SIGNAL \s_reset_n_2r~regout\ : std_logic;
+SIGNAL \reset_n_r~feeder_combout\ : std_logic;
+SIGNAL \reset_n_r~regout\ : std_logic;
+SIGNAL \reset_n_2r~feeder_combout\ : std_logic;
+SIGNAL \reset_n_2r~regout\ : std_logic;
 SIGNAL \i_serial_uart|reset_r~regout\ : std_logic;
 SIGNAL \i_serial_uart|reset_2r~regout\ : std_logic;
 SIGNAL \i_serial_uart|Selector28~0_combout\ : std_logic;
@@ -244,20 +244,20 @@ SIGNAL \Mux1~3_combout\ : std_logic;
 SIGNAL \Mux0~2_combout\ : std_logic;
 SIGNAL \Mux0~1_combout\ : std_logic;
 SIGNAL \Mux0~3_combout\ : std_logic;
-SIGNAL \i_LED_Blink|s_counter_500ms[0]~5_combout\ : std_logic;
-SIGNAL \i_LED_Blink|s_counter_500ms[3]~12\ : std_logic;
-SIGNAL \i_LED_Blink|s_counter_500ms[4]~13_combout\ : std_logic;
+SIGNAL \i_LED_Blink|counter_500ms[0]~5_combout\ : std_logic;
+SIGNAL \i_LED_Blink|counter_500ms[3]~12\ : std_logic;
+SIGNAL \i_LED_Blink|counter_500ms[4]~13_combout\ : std_logic;
 SIGNAL \i_LED_Blink|LessThan0~1_combout\ : std_logic;
-SIGNAL \i_LED_Blink|s_counter_500ms[0]~6\ : std_logic;
-SIGNAL \i_LED_Blink|s_counter_500ms[1]~8\ : std_logic;
-SIGNAL \i_LED_Blink|s_counter_500ms[2]~10\ : std_logic;
-SIGNAL \i_LED_Blink|s_counter_500ms[3]~11_combout\ : std_logic;
-SIGNAL \i_LED_Blink|s_counter_500ms[1]~7_combout\ : std_logic;
+SIGNAL \i_LED_Blink|counter_500ms[0]~6\ : std_logic;
+SIGNAL \i_LED_Blink|counter_500ms[1]~8\ : std_logic;
+SIGNAL \i_LED_Blink|counter_500ms[2]~10\ : std_logic;
+SIGNAL \i_LED_Blink|counter_500ms[3]~11_combout\ : std_logic;
+SIGNAL \i_LED_Blink|counter_500ms[1]~7_combout\ : std_logic;
 SIGNAL \i_LED_Blink|LessThan0~0_combout\ : std_logic;
-SIGNAL \i_LED_Blink|s_tick~0_combout\ : std_logic;
-SIGNAL \i_LED_Blink|s_tick~regout\ : std_logic;
-SIGNAL \i_LED_Blink|s_led~0_combout\ : std_logic;
-SIGNAL \i_LED_Blink|s_led~regout\ : std_logic;
+SIGNAL \i_LED_Blink|tick~0_combout\ : std_logic;
+SIGNAL \i_LED_Blink|tick~regout\ : std_logic;
+SIGNAL \i_LED_Blink|led~0_combout\ : std_logic;
+SIGNAL \i_LED_Blink|led~regout\ : std_logic;
 SIGNAL \i_serial_uart|received_error~0_combout\ : std_logic;
 SIGNAL \i_serial_uart|received_error~regout\ : std_logic;
 SIGNAL \i_serial_uart|tx_bit_no\ : std_logic_vector(2 DOWNTO 0);
@@ -266,11 +266,11 @@ SIGNAL \i_serial_uart|rx_byte_int\ : std_logic_vector(6 DOWNTO 0);
 SIGNAL \i_serial_uart|rx_bit_no\ : std_logic_vector(2 DOWNTO 0);
 SIGNAL \i_serial_uart|rx_bit_cnt\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \i_serial_uart|received_data\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \i_LED_Blink|s_counter_500ms\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL s_hex0 : std_logic_vector(6 DOWNTO 0);
-SIGNAL \ALT_INV_s_reset_n_2r~regout\ : std_logic;
-SIGNAL ALT_INV_s_hex0 : std_logic_vector(6 DOWNTO 0);
+SIGNAL \i_LED_Blink|counter_500ms\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL seven_seg_vector : std_logic_vector(6 DOWNTO 0);
+SIGNAL ALT_INV_seven_seg_vector : std_logic_vector(6 DOWNTO 0);
 SIGNAL \i_serial_uart|ALT_INV_reset_2r~regout\ : std_logic;
+SIGNAL \ALT_INV_reset_n_2r~regout\ : std_logic;
 
 BEGIN
 
@@ -285,26 +285,26 @@ ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
 \clock_50~clkctrl_INCLK_bus\ <= (gnd & gnd & gnd & \clock_50~combout\);
-\ALT_INV_s_reset_n_2r~regout\ <= NOT \s_reset_n_2r~regout\;
-ALT_INV_s_hex0(6) <= NOT s_hex0(6);
-ALT_INV_s_hex0(5) <= NOT s_hex0(5);
-ALT_INV_s_hex0(4) <= NOT s_hex0(4);
-ALT_INV_s_hex0(3) <= NOT s_hex0(3);
-ALT_INV_s_hex0(2) <= NOT s_hex0(2);
-ALT_INV_s_hex0(1) <= NOT s_hex0(1);
-ALT_INV_s_hex0(0) <= NOT s_hex0(0);
+ALT_INV_seven_seg_vector(6) <= NOT seven_seg_vector(6);
+ALT_INV_seven_seg_vector(5) <= NOT seven_seg_vector(5);
+ALT_INV_seven_seg_vector(4) <= NOT seven_seg_vector(4);
+ALT_INV_seven_seg_vector(3) <= NOT seven_seg_vector(3);
+ALT_INV_seven_seg_vector(2) <= NOT seven_seg_vector(2);
+ALT_INV_seven_seg_vector(1) <= NOT seven_seg_vector(1);
+ALT_INV_seven_seg_vector(0) <= NOT seven_seg_vector(0);
 \i_serial_uart|ALT_INV_reset_2r~regout\ <= NOT \i_serial_uart|reset_2r~regout\;
+\ALT_INV_reset_n_2r~regout\ <= NOT \reset_n_2r~regout\;
 
 -- Location: LCFF_X24_Y20_N13
-\i_LED_Blink|s_counter_500ms[2]\ : cycloneii_lcell_ff
+\i_LED_Blink|counter_500ms[2]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
-	datain => \i_LED_Blink|s_counter_500ms[2]~9_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	datain => \i_LED_Blink|counter_500ms[2]~9_combout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	sclr => \i_LED_Blink|LessThan0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \i_LED_Blink|s_counter_500ms\(2));
+	regout => \i_LED_Blink|counter_500ms\(2));
 
 -- Location: LCFF_X22_Y22_N27
 \i_serial_uart|rx_bit_cnt[12]\ : cycloneii_lcell_ff
@@ -367,10 +367,10 @@ PORT MAP (
 	regout => \i_serial_uart|tx_bit_cnt_en~regout\);
 
 -- Location: LCCOMB_X24_Y20_N12
-\i_LED_Blink|s_counter_500ms[2]~9\ : cycloneii_lcell_comb
+\i_LED_Blink|counter_500ms[2]~9\ : cycloneii_lcell_comb
 -- Equation(s):
--- \i_LED_Blink|s_counter_500ms[2]~9_combout\ = (\i_LED_Blink|s_counter_500ms\(2) & (\i_LED_Blink|s_counter_500ms[1]~8\ $ (GND))) # (!\i_LED_Blink|s_counter_500ms\(2) & (!\i_LED_Blink|s_counter_500ms[1]~8\ & VCC))
--- \i_LED_Blink|s_counter_500ms[2]~10\ = CARRY((\i_LED_Blink|s_counter_500ms\(2) & !\i_LED_Blink|s_counter_500ms[1]~8\))
+-- \i_LED_Blink|counter_500ms[2]~9_combout\ = (\i_LED_Blink|counter_500ms\(2) & (\i_LED_Blink|counter_500ms[1]~8\ $ (GND))) # (!\i_LED_Blink|counter_500ms\(2) & (!\i_LED_Blink|counter_500ms[1]~8\ & VCC))
+-- \i_LED_Blink|counter_500ms[2]~10\ = CARRY((\i_LED_Blink|counter_500ms\(2) & !\i_LED_Blink|counter_500ms[1]~8\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -378,11 +378,11 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \i_LED_Blink|s_counter_500ms\(2),
+	dataa => \i_LED_Blink|counter_500ms\(2),
 	datad => VCC,
-	cin => \i_LED_Blink|s_counter_500ms[1]~8\,
-	combout => \i_LED_Blink|s_counter_500ms[2]~9_combout\,
-	cout => \i_LED_Blink|s_counter_500ms[2]~10\);
+	cin => \i_LED_Blink|counter_500ms[1]~8\,
+	combout => \i_LED_Blink|counter_500ms[2]~9_combout\,
+	cout => \i_LED_Blink|counter_500ms[2]~10\);
 
 -- Location: LCCOMB_X22_Y22_N6
 \i_serial_uart|rx_bit_cnt[2]~17\ : cycloneii_lcell_comb
@@ -1122,9 +1122,9 @@ PORT MAP (
 	combout => \key_n~combout\);
 
 -- Location: LCCOMB_X24_Y20_N2
-\s_reset_n_r~feeder\ : cycloneii_lcell_comb
+\reset_n_r~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \s_reset_n_r~feeder_combout\ = \key_n~combout\
+-- \reset_n_r~feeder_combout\ = \key_n~combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1133,21 +1133,21 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \key_n~combout\,
-	combout => \s_reset_n_r~feeder_combout\);
+	combout => \reset_n_r~feeder_combout\);
 
 -- Location: LCFF_X24_Y20_N3
-s_reset_n_r : cycloneii_lcell_ff
+reset_n_r : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
-	datain => \s_reset_n_r~feeder_combout\,
+	datain => \reset_n_r~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \s_reset_n_r~regout\);
+	regout => \reset_n_r~regout\);
 
 -- Location: LCCOMB_X24_Y20_N30
-\s_reset_n_2r~feeder\ : cycloneii_lcell_comb
+\reset_n_2r~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \s_reset_n_2r~feeder_combout\ = \s_reset_n_r~regout\
+-- \reset_n_2r~feeder_combout\ = \reset_n_r~regout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1155,23 +1155,23 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \s_reset_n_r~regout\,
-	combout => \s_reset_n_2r~feeder_combout\);
+	datad => \reset_n_r~regout\,
+	combout => \reset_n_2r~feeder_combout\);
 
 -- Location: LCFF_X24_Y20_N31
-s_reset_n_2r : cycloneii_lcell_ff
+reset_n_2r : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
-	datain => \s_reset_n_2r~feeder_combout\,
+	datain => \reset_n_2r~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \s_reset_n_2r~regout\);
+	regout => \reset_n_2r~regout\);
 
 -- Location: LCFF_X22_Y20_N21
 \i_serial_uart|reset_r\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
-	sdata => \s_reset_n_2r~regout\,
+	sdata => \reset_n_2r~regout\,
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -2595,14 +2595,14 @@ PORT MAP (
 	combout => \Mux6~3_combout\);
 
 -- Location: LCFF_X24_Y20_N25
-\s_hex0[0]\ : cycloneii_lcell_ff
+\seven_seg_vector[0]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
 	datain => \Mux6~3_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => s_hex0(0));
+	regout => seven_seg_vector(0));
 
 -- Location: LCCOMB_X22_Y20_N12
 \i_serial_uart|received_data~4\ : cycloneii_lcell_comb
@@ -2767,14 +2767,14 @@ PORT MAP (
 	combout => \Mux5~4_combout\);
 
 -- Location: LCFF_X25_Y20_N29
-\s_hex0[1]\ : cycloneii_lcell_ff
+\seven_seg_vector[1]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
 	datain => \Mux5~4_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => s_hex0(1));
+	regout => seven_seg_vector(1));
 
 -- Location: LCCOMB_X25_Y20_N2
 \Mux4~0\ : cycloneii_lcell_comb
@@ -2828,14 +2828,14 @@ PORT MAP (
 	combout => \Mux4~2_combout\);
 
 -- Location: LCFF_X24_Y20_N23
-\s_hex0[2]\ : cycloneii_lcell_ff
+\seven_seg_vector[2]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
 	datain => \Mux4~2_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => s_hex0(2));
+	regout => seven_seg_vector(2));
 
 -- Location: LCCOMB_X22_Y20_N22
 \Mux3~0\ : cycloneii_lcell_comb
@@ -2890,14 +2890,14 @@ PORT MAP (
 	combout => \Mux3~3_combout\);
 
 -- Location: LCFF_X24_Y20_N5
-\s_hex0[3]\ : cycloneii_lcell_ff
+\seven_seg_vector[3]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
 	datain => \Mux3~3_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => s_hex0(3));
+	regout => seven_seg_vector(3));
 
 -- Location: LCCOMB_X23_Y20_N2
 \Mux2~0\ : cycloneii_lcell_comb
@@ -3016,14 +3016,14 @@ PORT MAP (
 	combout => \Mux2~5_combout\);
 
 -- Location: LCFF_X24_Y20_N7
-\s_hex0[4]\ : cycloneii_lcell_ff
+\seven_seg_vector[4]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
 	datain => \Mux2~5_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => s_hex0(4));
+	regout => seven_seg_vector(4));
 
 -- Location: LCCOMB_X23_Y20_N8
 \Mux1~2\ : cycloneii_lcell_comb
@@ -3094,14 +3094,14 @@ PORT MAP (
 	combout => \Mux1~3_combout\);
 
 -- Location: LCFF_X23_Y20_N29
-\s_hex0[5]\ : cycloneii_lcell_ff
+\seven_seg_vector[5]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
 	datain => \Mux1~3_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => s_hex0(5));
+	regout => seven_seg_vector(5));
 
 -- Location: LCCOMB_X25_Y20_N10
 \Mux0~2\ : cycloneii_lcell_comb
@@ -3155,20 +3155,20 @@ PORT MAP (
 	combout => \Mux0~3_combout\);
 
 -- Location: LCFF_X24_Y20_N27
-\s_hex0[6]\ : cycloneii_lcell_ff
+\seven_seg_vector[6]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
 	datain => \Mux0~3_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => s_hex0(6));
+	regout => seven_seg_vector(6));
 
 -- Location: LCCOMB_X24_Y20_N8
-\i_LED_Blink|s_counter_500ms[0]~5\ : cycloneii_lcell_comb
+\i_LED_Blink|counter_500ms[0]~5\ : cycloneii_lcell_comb
 -- Equation(s):
--- \i_LED_Blink|s_counter_500ms[0]~5_combout\ = \i_LED_Blink|s_counter_500ms\(0) $ (VCC)
--- \i_LED_Blink|s_counter_500ms[0]~6\ = CARRY(\i_LED_Blink|s_counter_500ms\(0))
+-- \i_LED_Blink|counter_500ms[0]~5_combout\ = \i_LED_Blink|counter_500ms\(0) $ (VCC)
+-- \i_LED_Blink|counter_500ms[0]~6\ = CARRY(\i_LED_Blink|counter_500ms\(0))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3176,16 +3176,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \i_LED_Blink|s_counter_500ms\(0),
+	datab => \i_LED_Blink|counter_500ms\(0),
 	datad => VCC,
-	combout => \i_LED_Blink|s_counter_500ms[0]~5_combout\,
-	cout => \i_LED_Blink|s_counter_500ms[0]~6\);
+	combout => \i_LED_Blink|counter_500ms[0]~5_combout\,
+	cout => \i_LED_Blink|counter_500ms[0]~6\);
 
 -- Location: LCCOMB_X24_Y20_N14
-\i_LED_Blink|s_counter_500ms[3]~11\ : cycloneii_lcell_comb
+\i_LED_Blink|counter_500ms[3]~11\ : cycloneii_lcell_comb
 -- Equation(s):
--- \i_LED_Blink|s_counter_500ms[3]~11_combout\ = (\i_LED_Blink|s_counter_500ms\(3) & (!\i_LED_Blink|s_counter_500ms[2]~10\)) # (!\i_LED_Blink|s_counter_500ms\(3) & ((\i_LED_Blink|s_counter_500ms[2]~10\) # (GND)))
--- \i_LED_Blink|s_counter_500ms[3]~12\ = CARRY((!\i_LED_Blink|s_counter_500ms[2]~10\) # (!\i_LED_Blink|s_counter_500ms\(3)))
+-- \i_LED_Blink|counter_500ms[3]~11_combout\ = (\i_LED_Blink|counter_500ms\(3) & (!\i_LED_Blink|counter_500ms[2]~10\)) # (!\i_LED_Blink|counter_500ms\(3) & ((\i_LED_Blink|counter_500ms[2]~10\) # (GND)))
+-- \i_LED_Blink|counter_500ms[3]~12\ = CARRY((!\i_LED_Blink|counter_500ms[2]~10\) # (!\i_LED_Blink|counter_500ms\(3)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3193,16 +3193,16 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \i_LED_Blink|s_counter_500ms\(3),
+	datab => \i_LED_Blink|counter_500ms\(3),
 	datad => VCC,
-	cin => \i_LED_Blink|s_counter_500ms[2]~10\,
-	combout => \i_LED_Blink|s_counter_500ms[3]~11_combout\,
-	cout => \i_LED_Blink|s_counter_500ms[3]~12\);
+	cin => \i_LED_Blink|counter_500ms[2]~10\,
+	combout => \i_LED_Blink|counter_500ms[3]~11_combout\,
+	cout => \i_LED_Blink|counter_500ms[3]~12\);
 
 -- Location: LCCOMB_X24_Y20_N16
-\i_LED_Blink|s_counter_500ms[4]~13\ : cycloneii_lcell_comb
+\i_LED_Blink|counter_500ms[4]~13\ : cycloneii_lcell_comb
 -- Equation(s):
--- \i_LED_Blink|s_counter_500ms[4]~13_combout\ = \i_LED_Blink|s_counter_500ms\(4) $ (!\i_LED_Blink|s_counter_500ms[3]~12\)
+-- \i_LED_Blink|counter_500ms[4]~13_combout\ = \i_LED_Blink|counter_500ms\(4) $ (!\i_LED_Blink|counter_500ms[3]~12\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3210,25 +3210,25 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \i_LED_Blink|s_counter_500ms\(4),
-	cin => \i_LED_Blink|s_counter_500ms[3]~12\,
-	combout => \i_LED_Blink|s_counter_500ms[4]~13_combout\);
+	dataa => \i_LED_Blink|counter_500ms\(4),
+	cin => \i_LED_Blink|counter_500ms[3]~12\,
+	combout => \i_LED_Blink|counter_500ms[4]~13_combout\);
 
 -- Location: LCFF_X24_Y20_N17
-\i_LED_Blink|s_counter_500ms[4]\ : cycloneii_lcell_ff
+\i_LED_Blink|counter_500ms[4]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
-	datain => \i_LED_Blink|s_counter_500ms[4]~13_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	datain => \i_LED_Blink|counter_500ms[4]~13_combout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	sclr => \i_LED_Blink|LessThan0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \i_LED_Blink|s_counter_500ms\(4));
+	regout => \i_LED_Blink|counter_500ms\(4));
 
 -- Location: LCCOMB_X24_Y20_N18
 \i_LED_Blink|LessThan0~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \i_LED_Blink|LessThan0~1_combout\ = (\i_LED_Blink|s_counter_500ms\(4) & !\i_LED_Blink|LessThan0~0_combout\)
+-- \i_LED_Blink|LessThan0~1_combout\ = (\i_LED_Blink|counter_500ms\(4) & !\i_LED_Blink|LessThan0~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3236,26 +3236,26 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \i_LED_Blink|s_counter_500ms\(4),
+	datac => \i_LED_Blink|counter_500ms\(4),
 	datad => \i_LED_Blink|LessThan0~0_combout\,
 	combout => \i_LED_Blink|LessThan0~1_combout\);
 
 -- Location: LCFF_X24_Y20_N9
-\i_LED_Blink|s_counter_500ms[0]\ : cycloneii_lcell_ff
+\i_LED_Blink|counter_500ms[0]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
-	datain => \i_LED_Blink|s_counter_500ms[0]~5_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	datain => \i_LED_Blink|counter_500ms[0]~5_combout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	sclr => \i_LED_Blink|LessThan0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \i_LED_Blink|s_counter_500ms\(0));
+	regout => \i_LED_Blink|counter_500ms\(0));
 
 -- Location: LCCOMB_X24_Y20_N10
-\i_LED_Blink|s_counter_500ms[1]~7\ : cycloneii_lcell_comb
+\i_LED_Blink|counter_500ms[1]~7\ : cycloneii_lcell_comb
 -- Equation(s):
--- \i_LED_Blink|s_counter_500ms[1]~7_combout\ = (\i_LED_Blink|s_counter_500ms\(1) & (!\i_LED_Blink|s_counter_500ms[0]~6\)) # (!\i_LED_Blink|s_counter_500ms\(1) & ((\i_LED_Blink|s_counter_500ms[0]~6\) # (GND)))
--- \i_LED_Blink|s_counter_500ms[1]~8\ = CARRY((!\i_LED_Blink|s_counter_500ms[0]~6\) # (!\i_LED_Blink|s_counter_500ms\(1)))
+-- \i_LED_Blink|counter_500ms[1]~7_combout\ = (\i_LED_Blink|counter_500ms\(1) & (!\i_LED_Blink|counter_500ms[0]~6\)) # (!\i_LED_Blink|counter_500ms\(1) & ((\i_LED_Blink|counter_500ms[0]~6\) # (GND)))
+-- \i_LED_Blink|counter_500ms[1]~8\ = CARRY((!\i_LED_Blink|counter_500ms[0]~6\) # (!\i_LED_Blink|counter_500ms\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3263,38 +3263,38 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \i_LED_Blink|s_counter_500ms\(1),
+	dataa => \i_LED_Blink|counter_500ms\(1),
 	datad => VCC,
-	cin => \i_LED_Blink|s_counter_500ms[0]~6\,
-	combout => \i_LED_Blink|s_counter_500ms[1]~7_combout\,
-	cout => \i_LED_Blink|s_counter_500ms[1]~8\);
+	cin => \i_LED_Blink|counter_500ms[0]~6\,
+	combout => \i_LED_Blink|counter_500ms[1]~7_combout\,
+	cout => \i_LED_Blink|counter_500ms[1]~8\);
 
 -- Location: LCFF_X24_Y20_N15
-\i_LED_Blink|s_counter_500ms[3]\ : cycloneii_lcell_ff
+\i_LED_Blink|counter_500ms[3]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
-	datain => \i_LED_Blink|s_counter_500ms[3]~11_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	datain => \i_LED_Blink|counter_500ms[3]~11_combout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	sclr => \i_LED_Blink|LessThan0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \i_LED_Blink|s_counter_500ms\(3));
+	regout => \i_LED_Blink|counter_500ms\(3));
 
 -- Location: LCFF_X24_Y20_N11
-\i_LED_Blink|s_counter_500ms[1]\ : cycloneii_lcell_ff
+\i_LED_Blink|counter_500ms[1]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
-	datain => \i_LED_Blink|s_counter_500ms[1]~7_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	datain => \i_LED_Blink|counter_500ms[1]~7_combout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	sclr => \i_LED_Blink|LessThan0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \i_LED_Blink|s_counter_500ms\(1));
+	regout => \i_LED_Blink|counter_500ms\(1));
 
 -- Location: LCCOMB_X24_Y20_N28
 \i_LED_Blink|LessThan0~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \i_LED_Blink|LessThan0~0_combout\ = ((!\i_LED_Blink|s_counter_500ms\(2) & (!\i_LED_Blink|s_counter_500ms\(0) & !\i_LED_Blink|s_counter_500ms\(1)))) # (!\i_LED_Blink|s_counter_500ms\(3))
+-- \i_LED_Blink|LessThan0~0_combout\ = ((!\i_LED_Blink|counter_500ms\(2) & (!\i_LED_Blink|counter_500ms\(0) & !\i_LED_Blink|counter_500ms\(1)))) # (!\i_LED_Blink|counter_500ms\(3))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3302,16 +3302,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \i_LED_Blink|s_counter_500ms\(2),
-	datab => \i_LED_Blink|s_counter_500ms\(3),
-	datac => \i_LED_Blink|s_counter_500ms\(0),
-	datad => \i_LED_Blink|s_counter_500ms\(1),
+	dataa => \i_LED_Blink|counter_500ms\(2),
+	datab => \i_LED_Blink|counter_500ms\(3),
+	datac => \i_LED_Blink|counter_500ms\(0),
+	datad => \i_LED_Blink|counter_500ms\(1),
 	combout => \i_LED_Blink|LessThan0~0_combout\);
 
 -- Location: LCCOMB_X24_Y20_N0
-\i_LED_Blink|s_tick~0\ : cycloneii_lcell_comb
+\i_LED_Blink|tick~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \i_LED_Blink|s_tick~0_combout\ = (\s_reset_n_2r~regout\ & (\i_LED_Blink|s_counter_500ms\(4) & ((!\i_LED_Blink|LessThan0~0_combout\)))) # (!\s_reset_n_2r~regout\ & (((\i_LED_Blink|s_tick~regout\))))
+-- \i_LED_Blink|tick~0_combout\ = (\reset_n_2r~regout\ & (\i_LED_Blink|counter_500ms\(4) & ((!\i_LED_Blink|LessThan0~0_combout\)))) # (!\reset_n_2r~regout\ & (((\i_LED_Blink|tick~regout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3319,25 +3319,25 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \i_LED_Blink|s_counter_500ms\(4),
-	datab => \s_reset_n_2r~regout\,
-	datac => \i_LED_Blink|s_tick~regout\,
+	dataa => \i_LED_Blink|counter_500ms\(4),
+	datab => \reset_n_2r~regout\,
+	datac => \i_LED_Blink|tick~regout\,
 	datad => \i_LED_Blink|LessThan0~0_combout\,
-	combout => \i_LED_Blink|s_tick~0_combout\);
+	combout => \i_LED_Blink|tick~0_combout\);
 
 -- Location: LCFF_X24_Y20_N1
-\i_LED_Blink|s_tick\ : cycloneii_lcell_ff
+\i_LED_Blink|tick\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
-	datain => \i_LED_Blink|s_tick~0_combout\,
+	datain => \i_LED_Blink|tick~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \i_LED_Blink|s_tick~regout\);
+	regout => \i_LED_Blink|tick~regout\);
 
 -- Location: LCCOMB_X24_Y20_N20
-\i_LED_Blink|s_led~0\ : cycloneii_lcell_comb
+\i_LED_Blink|led~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \i_LED_Blink|s_led~0_combout\ = \i_LED_Blink|s_led~regout\ $ (\i_LED_Blink|s_tick~regout\)
+-- \i_LED_Blink|led~0_combout\ = \i_LED_Blink|led~regout\ $ (\i_LED_Blink|tick~regout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3345,19 +3345,19 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \i_LED_Blink|s_led~regout\,
-	datad => \i_LED_Blink|s_tick~regout\,
-	combout => \i_LED_Blink|s_led~0_combout\);
+	datac => \i_LED_Blink|led~regout\,
+	datad => \i_LED_Blink|tick~regout\,
+	combout => \i_LED_Blink|led~0_combout\);
 
 -- Location: LCFF_X24_Y20_N21
-\i_LED_Blink|s_led\ : cycloneii_lcell_ff
+\i_LED_Blink|led\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_50~clkctrl_outclk\,
-	datain => \i_LED_Blink|s_led~0_combout\,
-	aclr => \ALT_INV_s_reset_n_2r~regout\,
+	datain => \i_LED_Blink|led~0_combout\,
+	aclr => \ALT_INV_reset_n_2r~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \i_LED_Blink|s_led~regout\);
+	regout => \i_LED_Blink|led~regout\);
 
 -- Location: LCCOMB_X21_Y20_N0
 \i_serial_uart|received_error~0\ : cycloneii_lcell_comb
@@ -3432,7 +3432,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => ALT_INV_s_hex0(0),
+	datain => ALT_INV_seven_seg_vector(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3458,7 +3458,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => ALT_INV_s_hex0(1),
+	datain => ALT_INV_seven_seg_vector(1),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3484,7 +3484,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => ALT_INV_s_hex0(2),
+	datain => ALT_INV_seven_seg_vector(2),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3510,7 +3510,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => ALT_INV_s_hex0(3),
+	datain => ALT_INV_seven_seg_vector(3),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3536,7 +3536,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => ALT_INV_s_hex0(4),
+	datain => ALT_INV_seven_seg_vector(4),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3562,7 +3562,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => ALT_INV_s_hex0(5),
+	datain => ALT_INV_seven_seg_vector(5),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3588,7 +3588,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => ALT_INV_s_hex0(6),
+	datain => ALT_INV_seven_seg_vector(6),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3614,7 +3614,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \i_LED_Blink|s_led~regout\,
+	datain => \i_LED_Blink|led~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
