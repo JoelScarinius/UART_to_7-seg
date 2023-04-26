@@ -61,20 +61,18 @@ package body seven_seg_pkg is
                 v_return_vector := c_7seg_numbers(8);
             when 57 => -- ASCII "9"
                 v_return_vector := c_7seg_numbers(9);
-            when 58 => -- ASCII ":"
-                v_return_vector := c_7seg_numbers(10);
             when 65 | 97 => -- ASCII "A" or "a"
-                v_return_vector := c_7seg_numbers(11);
+                v_return_vector := c_7seg_numbers(10);
             when 66 | 98 => -- ASCII "B" or "b"
-                v_return_vector := c_7seg_numbers(12);
+                v_return_vector := c_7seg_numbers(11);
             when 67 | 99 => -- ASCII "C" or "c"
-                v_return_vector := c_7seg_numbers(13);
+                v_return_vector := c_7seg_numbers(12);
             when 68 | 100 => -- ASCII "D" or "d"
-                v_return_vector := c_7seg_numbers(14);
+                v_return_vector := c_7seg_numbers(13);
             when 69 | 101 => -- ASCII "E" or "e"
-                v_return_vector := c_7seg_numbers(15);
+                v_return_vector := c_7seg_numbers(14);
             when 70 | 102 => -- ASCII "F" or "f"
-                v_return_vector := c_7seg_numbers(16);
+                v_return_vector := c_7seg_numbers(15);
             when others =>
                 v_return_vector := c_7seg_numbers(16);
         end case;

@@ -81,7 +81,9 @@ begin
         if (reset_n_2r = '0') then
             seven_seg_vector <= "1111111"; -- off
         elsif rising_edge(clock_50) then
-            seven_seg_vector <= fn_ascii_to_7seg(received_data);
+            if (received_data_valid = '1') then
+                seven_seg_vector <= fn_ascii_to_7seg(received_data);
+            end if;
         end if;
     end process p_run_top_level_design;
 end architecture;

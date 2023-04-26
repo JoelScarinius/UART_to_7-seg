@@ -56,23 +56,6 @@ vsim work.top_level
 # Loading work.top_level(rtl)
 # Loading work.serial_uart(rtl)
 # Loading work.led_blink(rtl)
-
-do ../../run_sim.txt
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package seven_seg_pkg
-# -- Compiling entity top_level
-# -- Compiling architecture rtl of top_level
-# -- Loading entity serial_uart
-# -- Loading entity LED_Blink
-# Loading work.top_level(rtl)
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 0  Instance: /top_level
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 0  Instance: /top_level
 add wave -position end  sim:/top_level/clock_50
 add wave -position end  sim:/top_level/key_n
 add wave -position end  sim:/top_level/uart_rxd
@@ -91,8 +74,28 @@ add wave -position end  sim:/top_level/reset_n
 add wave -position end  sim:/top_level/reset_n_r
 add wave -position end  sim:/top_level/reset_n_2r
 
-add wave -position end  sim:/top_level/reset_n_2r
 do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LED_Blink
+# -- Compiling architecture rtl of LED_Blink
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -103,8 +106,155 @@ do ../../run_sim.txt
 # -- Compiling architecture rtl of top_level
 # -- Loading entity serial_uart
 # -- Loading entity LED_Blink
+# Loading work.seven_seg_pkg(body)
 # Loading work.top_level(rtl)
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 0  Instance: /top_level
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 0  Instance: /top_level
+# Loading work.serial_uart(rtl)
+# Loading work.led_blink(rtl)
+# WARNING: No extended dataflow license exists
+
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LED_Blink
+# -- Compiling architecture rtl of LED_Blink
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.serial_uart(rtl)
+# Loading work.led_blink(rtl)
+
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LED_Blink
+# -- Compiling architecture rtl of LED_Blink
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.serial_uart(rtl)
+# Loading work.led_blink(rtl)
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LED_Blink
+# -- Compiling architecture rtl of LED_Blink
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.serial_uart(rtl)
+# Loading work.led_blink(rtl)
+
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LED_Blink
+# -- Compiling architecture rtl of LED_Blink
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity LED_Blink
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.serial_uart(rtl)
+# Loading work.led_blink(rtl)
